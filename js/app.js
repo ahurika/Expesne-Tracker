@@ -19,6 +19,7 @@
   const amountError = document.getElementById('amountError');
   const categoryError = document.getElementById('categoryError');
   const totalEl = document.getElementById('totalAmount');
+  const headerTotal = document.getElementById('headerTotal');
   const expenseCountEl = document.getElementById('expenseCount');
   const expenseListEl = document.getElementById('expenseList');
   const dateEl = document.getElementById('currentDate');
@@ -137,6 +138,7 @@
       return sum + e.amount;
     }, 0);
     totalEl.textContent = formatNaira(total);
+    if (headerTotal) headerTotal.textContent = formatNaira(total);
   }
 
   function updateCount() {
